@@ -5,10 +5,102 @@
  */
 package ObjetosNegocio;
 
+import java.io.File;
+import java.util.Date;
+
 /**
  *
  * @author David
  */
 public class Usuario {
+    protected String nombreCompleto;
+    protected String correo;
+    protected String contrasena;
+    protected String telefono;
+    protected File avatar;
+    protected Municipio municipio;
+    protected Date fechaNacimiento;
+    protected String genero;
+
+    public Usuario(String nombreCompleto, String correo, String contrasena, String telefono, File avatar, Municipio municipio, Date fechaNacimiento, String genero) {
+        this.nombreCompleto = nombreCompleto;
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.telefono = telefono;
+        this.avatar = avatar;
+        this.municipio = municipio;
+        this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+    }
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public File getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(File avatar) {
+        this.avatar = avatar;
+    }
+
+    public Municipio getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
+    }
+
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombreCompleto=" + nombreCompleto + ", correo=" + correo + ", contrasena=" + contrasena + ", telefono=" + telefono + ", avatar=" + avatar + ", municipio=" + municipio + ", fechaNacimiento=" + fechaNacimiento + ", genero=" + genero + '}';
+    }
+    
     
 }
