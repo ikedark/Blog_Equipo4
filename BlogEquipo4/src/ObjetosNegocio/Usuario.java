@@ -13,14 +13,15 @@ import java.util.Date;
  * @author David
  */
 public class Usuario {
-    protected String nombreCompleto;
-    protected String correo;
-    protected String contrasena;
-    protected String telefono;
-    protected File avatar;
-    protected Municipio municipio;
-    protected Date fechaNacimiento;
-    protected String genero;
+    private ObjectId id;
+    private String nombreCompleto;
+    private String correo;
+    private String contrasena;
+    private String telefono;
+    private File avatar;
+    private Municipio municipio;
+    private Date fechaNacimiento;
+    private String genero;
 
     public Usuario(String nombreCompleto, String correo, String contrasena, String telefono, File avatar, Municipio municipio, Date fechaNacimiento, String genero) {
         this.nombreCompleto = nombreCompleto;
@@ -102,5 +103,7 @@ public class Usuario {
         return "Usuario{" + "nombreCompleto=" + nombreCompleto + ", correo=" + correo + ", contrasena=" + contrasena + ", telefono=" + telefono + ", avatar=" + avatar + ", municipio=" + municipio + ", fechaNacimiento=" + fechaNacimiento + ", genero=" + genero + '}';
     }
     
+    
+
     
 }

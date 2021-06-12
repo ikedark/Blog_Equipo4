@@ -5,10 +5,15 @@
  */
 package ObjetosNegocio;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Jaime Valdez
  */
 public class Comentario {
+    private LocalDateTime fechaHora;
+    private String contenido;
+    
     
 }

@@ -5,10 +5,73 @@
  */
 package ObjetosNegocio;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author Jaime Valdez
  */
 public class Post {
+    private LocalDateTime fechaHoraCreacion;
+    private String titulo;
+    private String contenido;
+    private LocalDateTime fechaHoraEdicion;
+    private String tipo;
+
+    public Post(LocalDateTime fechaHoraCreacion, String titulo, String contenido, LocalDateTime fechaHoraEdicion, String tipo) {
+        this.fechaHoraCreacion = fechaHoraCreacion;
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fechaHoraEdicion = fechaHoraEdicion;
+        this.tipo = tipo;
+    }
+
+    public LocalDateTime getFechaHoraCreacion() {
+        return fechaHoraCreacion;
+    }
+
+    public void setFechaHoraCreacion(LocalDateTime fechaHoraCreacion) {
+        this.fechaHoraCreacion = fechaHoraCreacion;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getContenido() {
+        return contenido;
+    }
+
+    public void setContenido(String contenido) {
+        this.contenido = contenido;
+    }
+
+    public LocalDateTime getFechaHoraEdicion() {
+        return fechaHoraEdicion;
+    }
+
+    public void setFechaHoraEdicion(LocalDateTime fechaHoraEdicion) {
+        this.fechaHoraEdicion = fechaHoraEdicion;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" + "fechaHoraCreacion=" + fechaHoraCreacion + ", titulo=" + titulo + ", contenido=" + contenido + ", fechaHoraEdicion=" + fechaHoraEdicion + ", tipo=" + tipo + '}';
+    }
+    
+    
+    
     
 }
