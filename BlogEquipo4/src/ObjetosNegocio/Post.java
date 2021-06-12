@@ -6,6 +6,7 @@
 package ObjetosNegocio;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,17 +15,44 @@ import java.time.LocalDateTime;
 public class Post {
     private LocalDateTime fechaHoraCreacion;
     private String titulo;
-    private String contenido;
+    private ArrayList<Comentario> contenido;
     private LocalDateTime fechaHoraEdicion;
     private String tipo;
 
-    public Post(LocalDateTime fechaHoraCreacion, String titulo, String contenido, LocalDateTime fechaHoraEdicion, String tipo) {
+    public Post() {
+    }
+
+    public Post(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Post(String titulo, ArrayList<Comentario> contenido) {
+        this.titulo = titulo;
+        this.contenido = contenido;
+    }
+
+    public Post(String titulo, ArrayList<Comentario> contenido, LocalDateTime fechaHoraEdicion) {
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fechaHoraEdicion = fechaHoraEdicion;
+    }
+
+    public Post(String titulo, ArrayList<Comentario> contenido, LocalDateTime fechaHoraEdicion, String tipo) {
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fechaHoraEdicion = fechaHoraEdicion;
+        this.tipo = tipo;
+    }
+
+    public Post(LocalDateTime fechaHoraCreacion, String titulo, ArrayList<Comentario> contenido, LocalDateTime fechaHoraEdicion, String tipo) {
         this.fechaHoraCreacion = fechaHoraCreacion;
         this.titulo = titulo;
         this.contenido = contenido;
         this.fechaHoraEdicion = fechaHoraEdicion;
         this.tipo = tipo;
     }
+
+    
 
     public LocalDateTime getFechaHoraCreacion() {
         return fechaHoraCreacion;
@@ -42,11 +70,11 @@ public class Post {
         this.titulo = titulo;
     }
 
-    public String getContenido() {
+    public ArrayList<Comentario> getContenido() {
         return contenido;
     }
 
-    public void setContenido(String contenido) {
+    public void setContenido(ArrayList<Comentario> contenido) {
         this.contenido = contenido;
     }
 
