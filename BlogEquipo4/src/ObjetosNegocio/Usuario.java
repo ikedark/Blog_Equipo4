@@ -25,6 +25,9 @@ public class Usuario {
     private Date fechaNacimiento;
     private String genero;
 
+    public Usuario() {
+    }
+    
     public Usuario(String nombreCompleto, String correo, String contrasena, String telefono, File avatar, Municipio municipio, Date fechaNacimiento, String genero) {
         this.nombreCompleto = nombreCompleto;
         this.correo = correo;
@@ -33,6 +36,15 @@ public class Usuario {
         this.avatar = avatar;
         this.municipio = municipio;
         this.fechaNacimiento = fechaNacimiento;
+        this.genero = genero;
+    }
+
+    public Usuario(String nombreCompleto, String correo, String contrasena, String telefono, Municipio municipio, String genero) {
+        this.nombreCompleto = nombreCompleto;
+        this.correo = correo;
+        this.contrasena = contrasena;
+        this.telefono = telefono;
+        this.municipio = municipio;
         this.genero = genero;
     }
 

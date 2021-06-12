@@ -14,6 +14,9 @@ public class Municipio {
     private ObjectId id;
     private String nombre;
 
+    public Municipio() {
+    }
+    
     public Municipio(ObjectId id, String nombre) {
         this.id = id;
         this.nombre = nombre;
