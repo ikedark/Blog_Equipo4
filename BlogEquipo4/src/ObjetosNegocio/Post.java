@@ -112,7 +112,7 @@ public class Post {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
+    
     @Override
     public int hashCode() {
         int hash = 3;

@@ -45,7 +45,7 @@ public class Estado {
     public void setMunicipio(Municipio municipio) {
         this.municipio = municipio;
     }
-
+    
     @Override
     public String toString() {
         return "Estado{" + "id=" + id + ", nombre=" + nombre + ", municipio=" + municipio + '}';

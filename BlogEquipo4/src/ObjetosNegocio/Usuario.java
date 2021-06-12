@@ -7,6 +7,7 @@ package ObjetosNegocio;
 
 import java.io.File;
 import java.util.Date;
+import java.util.Objects;
 import org.bson.types.ObjectId;
 
 /**
@@ -99,12 +100,43 @@ public class Usuario {
         this.genero = genero;
     }
 
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
+    }
+
     @Override
     public String toString() {
-        return "Usuario{" + "nombreCompleto=" + nombreCompleto + ", correo=" + correo + ", contrasena=" + contrasena + ", telefono=" + telefono + ", avatar=" + avatar + ", municipio=" + municipio + ", fechaNacimiento=" + fechaNacimiento + ", genero=" + genero + '}';
+        return "Usuario{" + "id=" + id + ", nombreCompleto=" + nombreCompleto + ", correo=" + correo + ", fechaNacimiento=" + fechaNacimiento + '}';
     }
     
-    
-
     
 }
