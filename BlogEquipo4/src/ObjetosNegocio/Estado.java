@@ -5,6 +5,8 @@
  */
 package ObjetosNegocio;
 
+import org.bson.types.ObjectId;
+
 /**
  *
  * @author David
