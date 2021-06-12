@@ -7,12 +7,15 @@ package ObjetosNegocio;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Objects;
+import org.bson.types.ObjectId;
 
 /**
  *
  * @author Jaime Valdez
  */
 public class Post {
+    private ObjectId id;
     private LocalDateTime fechaHoraCreacion;
     private String titulo;
     private ArrayList<Comentario> contenido;
@@ -52,6 +55,22 @@ public class Post {
         this.tipo = tipo;
     }
 
+    public Post(ObjectId id, LocalDateTime fechaHoraCreacion, String titulo, ArrayList<Comentario> contenido, LocalDateTime fechaHoraEdicion, String tipo) {
+        this.id = id;
+        this.fechaHoraCreacion = fechaHoraCreacion;
+        this.titulo = titulo;
+        this.contenido = contenido;
+        this.fechaHoraEdicion = fechaHoraEdicion;
+        this.tipo = tipo;
+    }
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
     
 
     public LocalDateTime getFechaHoraCreacion() {
@@ -94,6 +113,33 @@ public class Post {
         this.tipo = tipo;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 17 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Post other = (Post) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
     @Override
     public String toString() {
         return "Post{" + "fechaHoraCreacion=" + fechaHoraCreacion + ", titulo=" + titulo + ", contenido=" + contenido + ", fechaHoraEdicion=" + fechaHoraEdicion + ", tipo=" + tipo + '}';
